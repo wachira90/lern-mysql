@@ -3,7 +3,7 @@ lern-mysql
 
 ## Step 1 Download
 ````
-wget https://github.com/wachira90/lern-mysql/blob/128e246b1f03f1830cae39b1e1dcf27614ef8573/mysqlsampledatabase.sql
+wget https://raw.githubusercontent.com/wachira90/lern-mysql/main/mysqlsampledatabase.sql
 ````
 
 ## Step 2  unzip the file to the C:\temp
