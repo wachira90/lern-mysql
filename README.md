@@ -36,3 +36,8 @@ mysql> show databases;
 | sys                |
 +--------------------+
 ````
+
+## create db
+````
+CREATE DATABASE `testdb` CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
+````
