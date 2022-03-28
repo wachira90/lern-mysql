@@ -3,11 +3,15 @@
 ## To create a backup of all MySQL server databases, run the following command:
 ````
 mysqldump --user root --password  --all-databases > all-databases.sql
+
+mysqldump -u root -p classicmodels > classicmodels.sql
 ````
 
 ## To recover data, use the following command:
 ````
 mysql --user root --password mysql < all-databases.sql
+
+mysql -u root -p pro_kk < pro_kk.sql
 
 ````
 
