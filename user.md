@@ -1,25 +1,25 @@
-# user management
+# MYSQL User Management
 
 mysql 8 change plugin mysql_native_password
 
-## create user
+## Create user
 
 ```CREATE USER 'adminpin'@'%' IDENTIFIED WITH mysql_native_password BY 'password';```
 
-## edit user plugin
+## Edit user plugin
 
 ```ALTER USER 'adminpin'@'%' IDENTIFIED WITH mysql_native_password BY 'password';```
 
-## grant
+## Grant
 
 ```GRANT ALL PRIVILEGES ON *.* TO 'adminpin'@'%' WITH GRANT OPTION;```
 
-## flush
+## Flush
 
 ```FLUSH PRIVILEGES;```
 
 
-## for option
+## Option
 
 ```GRANT CREATE, ALTER, DROP, INSERT, UPDATE, DELETE, SELECT, REFERENCES, RELOAD on *.* TO 'adminpin'@'%' WITH GRANT OPTION;```
 
