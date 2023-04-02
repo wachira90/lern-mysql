@@ -62,6 +62,33 @@ mysql> show databases;
 
 ## create db
 
-````
+```sql
 CREATE DATABASE `testdb` CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
-````
+```
+
+
+## shell script backup 
+
+```bash
+#!/bin/bash
+# Set variables
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=password
+DB_NAME=mydatabase
+BACKUP_DIR=/path/to/backup/directory
+DATE=$(date +%F)
+
+# Create backup directory if it doesn't exist
+mkdir -p $BACKUP_DIR
+
+# Create backup filename
+BACKUP_FILE=$BACKUP_DIR/$DB_NAME-$DATE.sql.gz
+
+# Dump database and gzip output
+mysqldump -h $DB_HOST -u $DB_USER -p$DB_PASS $DB_NAME | gzip > $BACKUP_FILE
+
+# Print success message
+echo "Backup of database $DB_NAME completed successfully!"
+```
+
